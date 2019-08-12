@@ -12,7 +12,7 @@ import SwiftUI
 import CoreNFC
 import PromiseKit
 
-final class UserData: NSObject, BindableObject, NFCTagReaderSessionDelegate {
+final class UserData: NSObject, ObservableObject, NFCTagReaderSessionDelegate {
     private(set) var willChange = PassthroughSubject<UserData, Never>()
 
     public var processedTag: TransitTag? {
